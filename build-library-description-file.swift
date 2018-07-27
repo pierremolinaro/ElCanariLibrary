@@ -109,13 +109,13 @@ extension Data {
 //   Computing sha1 of a file
 //——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
-func shaOfFile (withBlobSHA inSHA: String) -> String {
+func shaOfFile (withBlobSHA inSHA: String) -> (Int, String) {
   let data = runCommandAndGetDataOutput (["/usr/bin/git", "show", inSHA])
   var s = ""
   for byte in data.sha1Hash () {
     s += "\(String (byte, radix:16, uppercase: false))"
   }
-  return s
+  return (data.count, s)
 }
 
 //——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
@@ -207,11 +207,12 @@ for descriptor in descriptorArray {
     if (ext == "ElCanariArtwork") || (ext == "ElCanariFont") {
       let c = t [0].components (separatedBy:" ")
       let blobSHA = c[2]
-      let fileSHA = shaOfFile (withBlobSHA: blobSHA)
+      let (fileSize, fileSHA) = shaOfFile (withBlobSHA: blobSHA)
       print ("BLOB SHA \(blobSHA), file SHA \(fileSHA), file \(filePath)")
       var d = [String : String] ()
       d ["name"] = filePath
       d ["fileSHA"] = fileSHA
+      d ["fileSize"] = "\(fileSize)"
       plist.append (d)
     }
   }
