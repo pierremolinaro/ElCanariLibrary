@@ -1,11 +1,12 @@
 PM-TEXT-FORMAT
 1
-{"DeviceComment":"","DevicePackages":{"grid-2mm-1-6":8,"grid-100mils-1-6":5,"grid-100mils-1-6-round":6},"DeviceSymbols":{"1x6-pins":1},"DeviceVersion":1,"WindowHeight":875,"WindowWidth":1116}
+{"Category":"pin header","DeviceComment":"","DevicePackages":{"grid-2mm-1-6":8,"grid-100mils-1-6":5,"grid-100mils-1-6-round":6},"DeviceSymbols":{"1x6-pins":1},"DeviceVersion":2,"WindowHeight":903,"WindowWidth":1116}
 $DeviceRoot
 mSelectedPageIndex
 mSelectedSymbolInspectorIndex
 mSelectedPackageInspectorIndex
 mTitle
+mCategory
 mImageData
 mPrefix
 mComments
@@ -83,6 +84,7 @@ mSlavePads
 0
 0
 Grid 1 row 6 columns, 100 mils or 2mm
+pin header
 
 K
 

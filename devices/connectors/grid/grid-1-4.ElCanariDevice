@@ -1,11 +1,12 @@
 PM-TEXT-FORMAT
 1
-{"DeviceComment":"","DevicePackages":{"grid-1cm-1-4":6,"grid-2mm-1-4":6,"grid-100mils-1-4":5},"DeviceSymbols":{"1x4-pins":1},"DeviceVersion":2,"WindowHeight":903,"WindowWidth":1116}
+{"Category":"pin header","DeviceComment":"","DevicePackages":{"grid-1cm-1-4":6,"grid-2mm-1-4":6,"grid-100mils-1-4":5},"DeviceSymbols":{"1x4-pins":1},"DeviceVersion":3,"WindowHeight":931,"WindowWidth":1116}
 $DeviceRoot
 mSelectedPageIndex
 mSelectedSymbolInspectorIndex
 mSelectedPackageInspectorIndex
 mTitle
+mCategory
 mImageData
 mPrefix
 mComments
@@ -79,10 +80,11 @@ mStyle
 mName
 mSlavePads
 @0
-2
+0
 0
 0
 Grid 1 row 4 columns, 100 mils or 2mm
+pin header
 
 K
 
